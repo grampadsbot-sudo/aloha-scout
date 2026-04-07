@@ -907,6 +907,35 @@
       font-size: 0.94rem;
     }
 
+
+    .proof-image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .proof-image-card {
+      border-radius: 28px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .proof-image-card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+      background: #111;
+    }
+
+    .proof-image-card .proof-copy {
+      padding: 16px 18px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .visual-grid,
@@ -1262,6 +1291,27 @@ That’s the Aloha Scout lane: more color, more clarity, more personality, and a
         <article class="proof-card">
           <h3>“We want to look more current.”</h3>
           <p>Cleaner visuals, better rhythm, better identity, and a feed that feels like it belongs now—not five years ago.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <section id="image-proof">
+      <div class="section-head">
+        <span class="section-tag">Image proof</span>
+        <h2>Raw deployed image assets shown plainly.</h2>
+        <p>
+          This section exists specifically to verify that the real restaurant photo and custom social preview image are visibly rendering on the live site without any ambiguous layered effects.
+        </p>
+      </div>
+      <div class="proof-image-grid">
+        <article class="proof-image-card">
+          <img src="/restaurant-hero.jpg" alt="Raw restaurant photo proof" />
+          <div class="proof-copy">Raw restaurant image proof block using a direct <code>&lt;img&gt;</code> element.</div>
+        </article>
+        <article class="proof-image-card">
+          <img src="/social-preview.png" alt="Raw social preview proof" />
+          <div class="proof-copy">Raw custom social-preview image proof block using a direct <code>&lt;img&gt;</code> element.</div>
         </article>
       </div>
     </section>
