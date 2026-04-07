@@ -12,9 +12,12 @@
   <meta property="og:description" content="Social media marketing for restaurants and small businesses—stronger visuals, better storytelling, and a feed that feels alive." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://aloha-scout.vercel.app" />
+  <meta property="og:image" content="https://aloha-scout.vercel.app/restaurant-hero.jpg" />
+  <meta property="og:image:alt" content="Aloha Scout restaurant marketing preview image" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Aloha Scout | Social Media Marketing with Island Spark" />
   <meta name="twitter:description" content="Social media marketing for restaurants and small businesses—stronger visuals, better storytelling, and a feed that feels alive." />
+  <meta name="twitter:image" content="https://aloha-scout.vercel.app/restaurant-hero.jpg" />
   <meta name="theme-color" content="#0b0b0d" />
   <style>
     :root {
@@ -667,10 +670,9 @@
       border-radius: 28px;
       overflow: hidden;
       position: relative;
-      background:
-        radial-gradient(circle at top right, rgba(255,255,255,0.22), transparent 14%),
-        linear-gradient(180deg, rgba(64,28,9,0.2), rgba(15,15,18,0.15)),
-        linear-gradient(135deg, #4a2d1a 0%, #8b4f24 20%, #d88b38 42%, #f2c46d 58%, #4e7d55 78%, #1c1c20 100%);
+      background-image: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.25)), url('/restaurant-hero.jpg');
+      background-size: cover;
+      background-position: center;
       box-shadow: var(--shadow);
       border: 1px solid rgba(255,255,255,0.08);
     }
@@ -687,7 +689,7 @@
     }
 
     .restaurant-photo::after {
-      content: "Restaurant hero image direction • warm food tones • inviting atmosphere • premium island feel";
+      content: "Real restaurant photo • warmer atmosphere • stronger appetite appeal • instant visual credibility";
       position: absolute;
       left: 40px;
       right: 40px;
