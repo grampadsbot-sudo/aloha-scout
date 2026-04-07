@@ -12,7 +12,7 @@
   <style>
     :root {
       --bg: #0b0b0d;
-      --panel: rgba(20, 20, 24, 0.9);
+      --panel: rgba(20, 20, 24, 0.88);
       --panel-soft: rgba(255, 255, 255, 0.05);
       --gold: #d4af37;
       --gold-soft: #f4da86;
@@ -21,8 +21,8 @@
       --pink: #ff6fb2;
       --teal: #67e8d4;
       --orange: #ff9f43;
-      --lime: #c7f36b;
-      --line: rgba(212, 175, 55, 0.22);
+      --violet: #8b5cf6;
+      --line: rgba(255, 255, 255, 0.08);
       --shadow: 0 22px 60px rgba(0, 0, 0, 0.38);
     }
 
@@ -137,12 +137,12 @@
     }
 
     .hero {
-      padding: 58px 0 30px;
+      padding: 58px 0 28px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 24px;
       align-items: center;
     }
@@ -188,7 +188,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 26px;
+      margin-bottom: 22px;
     }
 
     .btn {
@@ -233,7 +233,7 @@
 
     .hero-visual {
       position: relative;
-      min-height: 560px;
+      min-height: 600px;
       border-radius: 34px;
       overflow: hidden;
       background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
@@ -310,8 +310,43 @@
       max-width: 250px;
     }
 
+    .mini-feed {
+      position: absolute;
+      left: 22px;
+      top: 110px;
+      width: 190px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: rgba(12,12,16,0.78);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .mini-feed-art {
+      height: 170px;
+      background: linear-gradient(135deg, rgba(255,111,178,0.95), rgba(255,159,67,0.95), rgba(103,232,212,0.88));
+      position: relative;
+    }
+
+    .mini-feed-art::after {
+      content: "New post vibe";
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      font-weight: 800;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .mini-feed-copy {
+      padding: 12px 14px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
     .metrics {
-      padding: 12px 0 18px;
+      padding: 10px 0 16px;
     }
 
     .metric-grid {
@@ -369,22 +404,28 @@
     }
 
     .service-grid,
+    .offer-grid,
     .visual-grid,
     .region-grid,
-    .gallery-grid {
+    .gallery-grid,
+    .social-proof-grid {
       display: grid;
       gap: 16px;
     }
 
-    .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .visual-grid { grid-template-columns: 1.15fr 0.85fr; }
+    .service-grid,
+    .offer-grid,
     .region-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .visual-grid { grid-template-columns: 1.1fr 0.9fr; }
     .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .social-proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
     .panel,
     .service-card,
+    .offer-card,
     .region-card,
-    .gallery-tile {
+    .gallery-tile,
+    .proof-card {
       border-radius: 28px;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
@@ -393,26 +434,33 @@
     }
 
     .service-card,
+    .offer-card,
     .region-card,
+    .proof-card,
     .panel {
       padding: 22px;
     }
 
     .service-card h3,
+    .offer-card h3,
     .region-card h3,
+    .proof-card h3,
     .panel h3 {
       margin: 0 0 10px;
       font-size: 1.28rem;
     }
 
     .service-card p,
+    .offer-card p,
     .region-card p,
+    .proof-card p,
     .panel p {
       margin: 0;
       color: var(--muted);
     }
 
-    .service-icon {
+    .service-icon,
+    .offer-badge {
       width: 52px;
       height: 52px;
       display: grid;
@@ -422,6 +470,33 @@
       font-size: 1.5rem;
       background: linear-gradient(135deg, rgba(255,111,178,0.22), rgba(255,159,67,0.18), rgba(103,232,212,0.18));
       border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .offer-badge {
+      width: auto;
+      height: auto;
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: white;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 12px 0 14px;
+      color: white;
+    }
+
+    .offer-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      display: grid;
+      gap: 8px;
     }
 
     .mood-board {
@@ -494,7 +569,7 @@
     }
 
     .feed-post .art {
-      height: 160px;
+      height: 180px;
       background:
         linear-gradient(135deg, rgba(255,111,178,0.9), rgba(255,159,67,0.9) 35%, rgba(212,175,55,0.92) 65%, rgba(103,232,212,0.9));
       position: relative;
@@ -517,6 +592,21 @@
       font-size: 0.95rem;
     }
 
+    .proof-card {
+      min-height: 220px;
+      position: relative;
+    }
+
+    .proof-card::after {
+      content: "✦";
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 1.3rem;
+      color: var(--gold-soft);
+      opacity: 0.9;
+    }
+
     .region-card .region-name {
       display: inline-block;
       margin-bottom: 10px;
@@ -527,7 +617,7 @@
     }
 
     .gallery-tile {
-      min-height: 220px;
+      min-height: 230px;
       position: relative;
       background: linear-gradient(135deg, rgba(255,111,178,0.3), rgba(255,159,67,0.3), rgba(103,232,212,0.22));
     }
@@ -541,7 +631,7 @@
     }
 
     .gallery-tile:nth-child(4) {
-      background: linear-gradient(135deg, rgba(199,243,107,0.24), rgba(103,232,212,0.24), rgba(255,159,67,0.28));
+      background: linear-gradient(135deg, rgba(139,92,246,0.26), rgba(103,232,212,0.22), rgba(255,159,67,0.24));
     }
 
     .gallery-label {
@@ -593,14 +683,21 @@
       .hero-grid,
       .visual-grid,
       .service-grid,
+      .offer-grid,
       .region-grid,
       .gallery-grid,
-      .metric-grid {
+      .metric-grid,
+      .social-proof-grid {
         grid-template-columns: 1fr;
       }
 
       .nav { display: none; }
-      .hero-visual { min-height: 460px; }
+      .hero-visual { min-height: 500px; }
+      .mini-feed {
+        width: 170px;
+        left: 18px;
+        top: 94px;
+      }
       h1 { font-size: clamp(2.5rem, 11vw, 4.4rem); }
       .gallery-tile { min-height: 180px; }
     }
@@ -618,8 +715,8 @@
       </a>
       <nav class="nav">
         <a href="#services">Services</a>
+        <a href="#offers">Offers</a>
         <a href="#style">Style</a>
-        <a href="#markets">Markets</a>
         <a href="#gallery">Vibe</a>
       </nav>
     </div>
@@ -635,18 +732,18 @@
             <span class="gradient-line">with more color, charm, and punch.</span>
           </h1>
           <p class="lede">
-            Aloha Scout is a standalone social media marketing service for restaurants and small businesses that want a stronger presence online—more beautiful feeds, better storytelling, and content that actually feels alive.
+            Aloha Scout is a social media marketing service for restaurants and small businesses that want a stronger presence online—more beautiful feeds, better storytelling, and content that feels alive instead of generic.
           </p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#services">See the service</a>
-            <a class="btn btn-secondary" href="#gallery">Feel the vibe</a>
+            <a class="btn btn-primary" href="#offers">View the offers</a>
+            <a class="btn btn-secondary" href="#gallery">See the visual direction</a>
           </div>
           <div class="chip-row">
             <span class="chip">Restaurants</span>
             <span class="chip">Local favorites</span>
-            <span class="chip">Social media strategy</span>
             <span class="chip">Visual direction</span>
             <span class="chip">Captions &amp; concepts</span>
+            <span class="chip">Feed glow-up</span>
           </div>
         </div>
 
@@ -656,13 +753,17 @@
             <div class="wave two"></div>
             <div class="wave three"></div>
           </div>
+          <div class="mini-feed">
+            <div class="mini-feed-art"></div>
+            <div class="mini-feed-copy">A stronger visual voice for feeds that need more warmth, style, and local energy.</div>
+          </div>
           <div class="floating-card card-top">
             <strong>Brand glow-up</strong>
-            <p>Less generic posting. More visual identity, local personality, and feed-worthy presence.</p>
+            <p>Less generic posting. More visual identity, local personality, and scroll-stopping presence.</p>
           </div>
           <div class="floating-card card-bottom">
             <strong>More than captions</strong>
-            <p>Strategy, style, visuals, hooks, and social content that feels like a real brand.</p>
+            <p>Strategy, styling, content ideas, hooks, and social direction that feels like a real brand.</p>
           </div>
         </div>
       </div>
@@ -676,7 +777,7 @@
         </div>
         <div class="metric">
           <strong>Feed polish</strong>
-          <span>Stronger visuals, stronger hooks, and better first impressions</span>
+          <span>Stronger visuals, better hooks, and a cleaner first impression</span>
         </div>
         <div class="metric">
           <strong>Story-first</strong>
@@ -684,7 +785,7 @@
         </div>
         <div class="metric">
           <strong>Stand-alone brand</strong>
-          <span>Aloha Scout stands on its own as a social media service</span>
+          <span>Aloha Scout stands on its own as a social media marketing service</span>
         </div>
       </div>
     </section>
@@ -701,7 +802,7 @@
         <span class="section-tag">Services</span>
         <h2>Social media marketing that looks and feels more exciting.</h2>
         <p>
-          This should not read like a wall of agency text. It should feel visual, stylish, and immediately clear: Aloha Scout helps businesses show up better online.
+          The pitch should be clear fast: Aloha Scout helps businesses show up better online with stronger visuals, better storytelling, and a more magnetic brand presence.
         </p>
       </div>
       <div class="service-grid">
@@ -718,7 +819,46 @@
         <article class="service-card">
           <div class="service-icon">✨</div>
           <h3>Visual spark</h3>
-          <p>Add color, rhythm, style, and personality so the business looks more magnetic online and more worth following.</p>
+          <p>Add color, rhythm, style, and personality so the business looks more memorable and more worth following online.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="offers">
+      <div class="section-head">
+        <span class="section-tag">Offer structure</span>
+        <h2>Clear offers make the service feel real.</h2>
+        <p>
+          This gives Aloha Scout more business clarity: not just a vibe, but actual ways someone could hire the service.
+        </p>
+      </div>
+      <div class="offer-grid">
+        <article class="offer-card">
+          <div class="offer-badge">Quick Glow-Up</div>
+          <div class="price">Starter refresh</div>
+          <ul class="offer-list">
+            <li>Social look-and-feel tune-up</li>
+            <li>Caption direction and visual themes</li>
+            <li>Simple feed polish recommendations</li>
+          </ul>
+        </article>
+        <article class="offer-card">
+          <div class="offer-badge">Signature Content</div>
+          <div class="price">Content package</div>
+          <ul class="offer-list">
+            <li>Post concepts and content calendar ideas</li>
+            <li>Story hooks and brand-angle writing</li>
+            <li>Reels and short-form concept direction</li>
+          </ul>
+        </article>
+        <article class="offer-card">
+          <div class="offer-badge">Full Presence</div>
+          <div class="price">Ongoing social support</div>
+          <ul class="offer-list">
+            <li>Brand voice consistency</li>
+            <li>Visual rhythm across the feed</li>
+            <li>Ongoing creative strategy and polish</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -735,7 +875,7 @@
         <article class="panel mood-board">
           <div>
             <h3>Visual mood</h3>
-            <p>Bright gradients, tropical warmth, clean premium framing, and enough color to make the brand memorable without looking childish.</p>
+            <p>Bright gradients, tropical warmth, clean premium framing, and enough color to make the brand memorable without feeling messy.</p>
           </div>
           <div>
             <div class="mood-art"></div>
@@ -761,29 +901,26 @@
       </div>
     </section>
 
-    <section id="markets">
+    <section>
       <div class="section-head">
-        <span class="section-tag">Markets</span>
-        <h2>Three markets. Three flavors of social storytelling.</h2>
+        <span class="section-tag">What clients want</span>
+        <h2>The pain is usually obvious.</h2>
         <p>
-          The same business should not feel exactly the same in every market. Aloha Scout should tune the energy and visual emphasis to the local audience.
+          Businesses already know when their feed feels flat, inconsistent, visually weak, or just not representative of how good they really are in person.
         </p>
       </div>
-      <div class="region-grid">
-        <article class="region-card">
-          <span class="region-name">Hawaii</span>
-          <h3>Warmth, belonging, and atmosphere.</h3>
-          <p>Lead with hospitality, place, community, flavor, and the feeling of being welcomed in.</p>
+      <div class="social-proof-grid">
+        <article class="proof-card">
+          <h3>“Our place feels better than our feed.”</h3>
+          <p>The brand experience in real life is stronger than what shows up online. Aloha Scout closes that gap.</p>
         </article>
-        <article class="region-card">
-          <span class="region-name">Las Vegas</span>
-          <h3>Bold, bright, and memorable.</h3>
-          <p>Show energy, standout service, hidden-gem appeal, and visuals that feel alive in the feed.</p>
+        <article class="proof-card">
+          <h3>“We need better content ideas.”</h3>
+          <p>Not random filler—actual concepts, hooks, and social moments worth posting.</p>
         </article>
-        <article class="region-card">
-          <span class="region-name">SF Bay Area</span>
-          <h3>Taste, credibility, and craft.</h3>
-          <p>Emphasize quality, founder substance, neighborhood relevance, and a more refined kind of social polish.</p>
+        <article class="proof-card">
+          <h3>“We want to look more current.”</h3>
+          <p>Cleaner visuals, better rhythm, better identity, and a feed that feels like it belongs now—not five years ago.</p>
         </article>
       </div>
     </section>
