@@ -36,7 +36,7 @@
     section{padding:34px 0}.section-head{max-width:760px;margin-bottom:20px}.section-tag{display:inline-block;margin-bottom:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--gold-soft);font-size:.74rem}.section-head h2{margin:0 0 10px;font-size:clamp(2rem,4vw,3.6rem);line-height:.96}.section-head p{margin:0;color:var(--muted);font-size:1.02rem}
     .metric-grid,.service-grid,.offer-grid,.what-grid,.promise-grid,.mockup-grid,.gallery-grid{display:grid;gap:16px}.metric-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.service-grid,.offer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.what-grid,.promise-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.mockup-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
     .metric,.service-card,.offer-card,.what-card,.promise-card,.mockup-card,.gallery-card{border-radius:28px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);overflow:hidden}.metric,.service-card,.offer-card{padding:22px}.metric strong{display:block;font-size:1.5rem;margin-bottom:6px;color:var(--gold-soft)}.metric span,.service-card p,.offer-card p{color:var(--muted)}
-    .service-icon,.offer-badge{width:52px;height:52px;display:grid;place-items:center;margin-bottom:16px;border-radius:16px;font-size:1.5rem;background:linear-gradient(135deg,rgba(255,111,178,.22),rgba(255,159,67,.18),rgba(103,232,212,.18));border:1px solid rgba(255,255,255,.08)}.offer-badge{width:auto;height:auto;display:inline-flex;padding:10px 14px;border-radius:999px;font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:#fff}.price{font-size:2rem;font-weight:800;margin:12px 0 14px;color:#fff}.offer-list{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:8px}
+    .offer-badge{display:inline-flex;padding:10px 14px;border-radius:999px;font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:#fff;background:linear-gradient(135deg,rgba(255,111,178,.22),rgba(255,159,67,.18),rgba(103,232,212,.18));border:1px solid rgba(255,255,255,.08)}.price{font-size:2rem;font-weight:800;margin:12px 0 14px;color:#fff}.offer-list{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:8px}
     .what-card img,.promise-card img,.gallery-card img{width:100%;height:220px;object-fit:cover}.what-copy,.promise-copy,.gallery-copy,.mockup-copy{padding:16px 18px}.what-copy h3,.promise-copy h3,.gallery-copy h3,.mockup-copy h3,.service-card h3,.offer-card h3{margin:0 0 10px;font-size:1.14rem}.what-copy p,.promise-copy p,.gallery-copy p,.mockup-copy p{margin:0;color:var(--muted)}
     .mockup-card img{width:100%;height:420px;object-fit:cover;background:#111}
     .quote-band{margin:8px 0 6px;padding:28px;border-radius:30px;background:linear-gradient(135deg,rgba(255,111,178,.12),rgba(255,159,67,.1),rgba(103,232,212,.12));border:1px solid rgba(255,255,255,.08);text-align:center;box-shadow:var(--shadow)}.quote-band blockquote{margin:0 auto 10px;max-width:860px;font-size:clamp(1.45rem,3vw,2.35rem);line-height:1.12}.quote-band p{margin:0;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:.74rem}
@@ -81,32 +81,22 @@
 
     <div class="quote-band"><blockquote>Aloha Scout is about helping small businesses look alive online so more people want to walk through the door.</blockquote><p>Not just content. Momentum.</p></div>
 
-    <section id="services">
-      <div class="section-head"><span class="section-tag">Services</span><h2>What the service actually does.</h2><p>Not abstract branding jargon—practical social media marketing work that helps small businesses present better, attract better, and convert attention into visits.</p></div>
-      <div class="service-grid">
-        <article class="service-card"><div class="service-icon">👤</div><h3>Owner story + brand voice</h3><p>Make the business feel human, personal, and easier to connect with.</p></article>
-        <article class="service-card"><div class="service-icon">📲</div><h3>Social posts people notice</h3><p>Create post ideas, mockups, hooks, and content directions that look made for social media.</p></article>
-        <article class="service-card"><div class="service-icon">🍽️</div><h3>More reasons to visit</h3><p>Show atmosphere, food, people, and energy in a way that makes the place feel worth trying.</p></article>
-      </div>
-    </section>
-
     <section id="what-we-do">
-      <div class="section-head"><span class="section-tag">What we do</span><h2>A picture should go with every major promise.</h2><p>This pass is built around actual business outcomes: owner identity, social engagement, customer curiosity, and the feeling of a place people want to visit.</p></div>
+      <div class="section-head"><span class="section-tag">What we do</span><h2>What we do to help a business get noticed and chosen.</h2><p>This section should explain the work Aloha Scout does, not flatter the owner with things they already believe about their business.</p></div>
       <div class="what-grid">
-        <article class="what-card"><img src="/business-owner-1.jpg" alt="Business owner identity" /><div class="what-copy"><h3>Show the owner</h3><p>People trust people. Show the face, the care, and the personality behind the business.</p></div></article>
-        <article class="what-card"><img src="/social-viewer.jpg" alt="Person viewing social media content" /><div class="what-copy"><h3>Show the marketing landing</h3><p>People should be able to imagine discovering the business in their feed and wanting to know more.</p></div></article>
-        <article class="what-card"><img src="/full-restaurant.jpg" alt="Full restaurant scene" /><div class="what-copy"><h3>Show the room full</h3><p>The goal is not just content. It is buzz, attention, and a place that feels worth showing up for.</p></div></article>
-        <article class="what-card"><img src="/receipts-smile.jpg" alt="Owner happy with receipts and results" /><div class="what-copy"><h3>Show the result</h3><p>A stronger online presence should connect to better business nights and happier owners.</p></div></article>
+        <article class="what-card"><img src="/business-owner-1.jpg" alt="Business owner featured as part of the brand" /><div class="what-copy"><h3>We turn the owner into part of the story</h3><p>We help the business feel more human by showing the people behind it—not just menus, offers, and generic promotions.</p></div></article>
+        <article class="what-card"><img src="/mockup-social.png" alt="Sample social post being seen on a phone" /><div class="what-copy"><h3>We create posts that look made for social media</h3><p>Instead of filler content, we shape posts that feel current, visual, and worth stopping on.</p></div></article>
+        <article class="what-card"><img src="/full-restaurant.jpg" alt="Busy restaurant full of people" /><div class="what-copy"><h3>We make the business look more active and desirable</h3><p>We use imagery, atmosphere, and social proof so people can picture the place as lively, trusted, and worth trying.</p></div></article>
+        <article class="what-card"><img src="/receipts-smile.jpg" alt="Owner happy after a good business night" /><div class="what-copy"><h3>We help the marketing connect to real outcomes</h3><p>The point is not just nicer posts. It is more curiosity, better nights, and more confidence that the business is showing up well online.</p></div></article>
       </div>
     </section>
 
-    <section id="promise">
-      <div class="section-head"><span class="section-tag">Why it works</span><h2>Every statement should have a supporting visual.</h2><p>This section ties each marketing promise to an image that makes the promise feel more concrete and less abstract.</p></div>
-      <div class="promise-grid">
-        <article class="promise-card"><img src="/restaurant-2.jpg" alt="Restaurant atmosphere and table setting" /><div class="promise-copy"><h3>The place looks worth trying</h3><p>Good content helps people picture themselves there before they ever walk in.</p></div></article>
-        <article class="promise-card"><img src="/business-owner-2.jpg" alt="Business owner working" /><div class="promise-copy"><h3>The business feels personal</h3><p>Owner-led content makes the brand more memorable and more trustworthy.</p></div></article>
-        <article class="promise-card"><img src="/restaurant-3.jpg" alt="Restaurant food and experience" /><div class="promise-copy"><h3>The feed has more energy</h3><p>Better imagery and better hooks create a stronger first impression online.</p></div></article>
-        <article class="promise-card"><img src="/restaurant-4.jpg" alt="Restaurant interior and guest experience" /><div class="promise-copy"><h3>The story feels complete</h3><p>Food alone is not enough. Atmosphere, people, and purpose matter too.</p></div></article>
+    <section id="services">
+      <div class="section-head"><span class="section-tag">How that shows up</span><h2>Practical work, not decorative marketing language.</h2><p>No icons. No vague claims. Just the kinds of marketing moves a business owner can actually understand and buy.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><img src="/business-owner-2.jpg" alt="Business owner at work" style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:16px;" /><h3>Owner-led content direction</h3><p>Plan posts, stories, and content angles that make the owner and brand more recognizable.</p></article>
+        <article class="service-card"><img src="/social-viewer.jpg" alt="Person seeing content on social media" style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:16px;" /><h3>Social-first post concepts</h3><p>Create visual post ideas and mockups that feel native to social media instead of borrowed from a brochure.</p></article>
+        <article class="service-card"><img src="/mockup-results.png" alt="Marketing tied to business outcomes" style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:16px;" /><h3>Marketing tied to business results</h3><p>Keep the focus on the real goal: stronger visibility, more visits, and a business owner who actually feels the difference.</p></article>
       </div>
     </section>
 
@@ -132,10 +122,10 @@
     <section id="gallery">
       <div class="section-head"><span class="section-tag">Visual support</span><h2>More varied visuals across the page.</h2><p>Different ideas need different images. Repeating one restaurant photo makes the page feel thin and less believable.</p></div>
       <div class="gallery-grid">
-        <article class="gallery-card"><img src="/business-owner-2.jpg" alt="Owner at work" /><div class="gallery-copy"><h3>Owner energy</h3><p>Who is behind the business?</p></div></article>
-        <article class="gallery-card"><img src="/social-viewer.jpg" alt="Customer seeing social media" /><div class="gallery-copy"><h3>Marketing seen</h3><p>Who is discovering the business?</p></div></article>
-        <article class="gallery-card"><img src="/full-restaurant.jpg" alt="Busy restaurant" /><div class="gallery-copy"><h3>Marketing felt</h3><p>What happens when the room has more life?</p></div></article>
-        <article class="gallery-card"><img src="/receipts-smile.jpg" alt="Positive business result" /><div class="gallery-copy"><h3>Outcome remembered</h3><p>What does a good night look like for the owner?</p></div></article>
+        <article class="gallery-card"><img src="/restaurant-2.jpg" alt="Restaurant atmosphere and table setting" /><div class="gallery-copy"><h3>Atmosphere</h3><p>What does the business feel like in person?</p></div></article>
+        <article class="gallery-card"><img src="/restaurant-3.jpg" alt="Restaurant social content visual" /><div class="gallery-copy"><h3>Attention</h3><p>What kind of visuals stop the scroll?</p></div></article>
+        <article class="gallery-card"><img src="/restaurant-4.jpg" alt="Restaurant experience detail" /><div class="gallery-copy"><h3>Experience</h3><p>What makes someone want to visit?</p></div></article>
+        <article class="gallery-card"><img src="/mockup-owner.png" alt="Owner story social mockup" /><div class="gallery-copy"><h3>Story</h3><p>How does the brand become memorable?</p></div></article>
       </div>
     </section>
   </main>
