@@ -408,24 +408,30 @@
     .visual-grid,
     .region-grid,
     .gallery-grid,
-    .social-proof-grid {
+    .social-proof-grid,
+    .sample-grid,
+    .caption-grid {
       display: grid;
       gap: 16px;
     }
 
     .service-grid,
     .offer-grid,
-    .region-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .visual-grid { grid-template-columns: 1.1fr 0.9fr; }
-    .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .region-grid,
     .social-proof-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .visual-grid,
+    .sample-grid { grid-template-columns: 1.1fr 0.9fr; }
+    .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .caption-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
     .panel,
     .service-card,
     .offer-card,
     .region-card,
     .gallery-tile,
-    .proof-card {
+    .proof-card,
+    .sample-panel,
+    .caption-card {
       border-radius: 28px;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
@@ -437,7 +443,9 @@
     .offer-card,
     .region-card,
     .proof-card,
-    .panel {
+    .panel,
+    .sample-panel,
+    .caption-card {
       padding: 22px;
     }
 
@@ -445,7 +453,9 @@
     .offer-card h3,
     .region-card h3,
     .proof-card h3,
-    .panel h3 {
+    .panel h3,
+    .sample-panel h3,
+    .caption-card h3 {
       margin: 0 0 10px;
       font-size: 1.28rem;
     }
@@ -454,13 +464,16 @@
     .offer-card p,
     .region-card p,
     .proof-card p,
-    .panel p {
+    .panel p,
+    .sample-panel p,
+    .caption-card p {
       margin: 0;
       color: var(--muted);
     }
 
     .service-icon,
-    .offer-badge {
+    .offer-badge,
+    .sample-badge {
       width: 52px;
       height: 52px;
       display: grid;
@@ -472,7 +485,8 @@
       border: 1px solid rgba(255,255,255,0.08);
     }
 
-    .offer-badge {
+    .offer-badge,
+    .sample-badge {
       width: auto;
       height: auto;
       display: inline-flex;
@@ -592,6 +606,43 @@
       font-size: 0.95rem;
     }
 
+    .sample-feed {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .sample-tile {
+      min-height: 180px;
+      border-radius: 22px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(255,111,178,0.92), rgba(255,159,67,0.88), rgba(103,232,212,0.8));
+    }
+
+    .sample-tile:nth-child(2) {
+      background: linear-gradient(135deg, rgba(103,232,212,0.9), rgba(79,141,253,0.8), rgba(212,175,55,0.8));
+    }
+
+    .sample-tile:nth-child(3) {
+      background: linear-gradient(135deg, rgba(255,159,67,0.9), rgba(139,92,246,0.76), rgba(255,111,178,0.84));
+    }
+
+    .sample-tile .label {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: rgba(10,10,14,0.68);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
     .proof-card {
       min-height: 220px;
       position: relative;
@@ -614,6 +665,26 @@
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--gold-soft);
+    }
+
+    .caption-card {
+      min-height: 220px;
+    }
+
+    .caption-card .caption-tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold-soft);
+    }
+
+    .caption-text {
+      color: white;
+      font-size: 1rem;
+      line-height: 1.6;
+      white-space: pre-line;
     }
 
     .gallery-tile {
@@ -687,7 +758,10 @@
       .region-grid,
       .gallery-grid,
       .metric-grid,
-      .social-proof-grid {
+      .social-proof-grid,
+      .sample-grid,
+      .caption-grid,
+      .sample-feed {
         grid-template-columns: 1fr;
       }
 
@@ -716,7 +790,7 @@
       <nav class="nav">
         <a href="#services">Services</a>
         <a href="#offers">Offers</a>
-        <a href="#style">Style</a>
+        <a href="#samples">Samples</a>
         <a href="#gallery">Vibe</a>
       </nav>
     </div>
@@ -735,8 +809,8 @@
             Aloha Scout is a social media marketing service for restaurants and small businesses that want a stronger presence online—more beautiful feeds, better storytelling, and content that feels alive instead of generic.
           </p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#offers">View the offers</a>
-            <a class="btn btn-secondary" href="#gallery">See the visual direction</a>
+            <a class="btn btn-primary" href="#samples">See sample work</a>
+            <a class="btn btn-secondary" href="#offers">View the offers</a>
           </div>
           <div class="chip-row">
             <span class="chip">Restaurants</span>
@@ -853,12 +927,83 @@
         </article>
         <article class="offer-card">
           <div class="offer-badge">Full Presence</div>
-          <div class="price">Ongoing social support</div>
+          <div class="price">Ongoing support</div>
           <ul class="offer-list">
             <li>Brand voice consistency</li>
             <li>Visual rhythm across the feed</li>
             <li>Ongoing creative strategy and polish</li>
           </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="samples">
+      <div class="section-head">
+        <span class="section-tag">Sample work</span>
+        <h2>Make the service feel buyable with real-looking examples.</h2>
+        <p>
+          These mockups make Aloha Scout feel more concrete: sample post sets, sample caption directions, and a clearer picture of what the work could actually look like.
+        </p>
+      </div>
+      <div class="sample-grid">
+        <article class="sample-panel">
+          <div class="sample-badge">Restaurant sample</div>
+          <h3>Featured client set: Golden Lei Kitchen</h3>
+          <p>A cozy island-inspired restaurant that needs a brighter, more modern feed and better story hooks for locals and visitors.</p>
+          <div class="sample-feed">
+            <div class="sample-tile">
+              <div class="label">Signature plate spotlight</div>
+            </div>
+            <div class="sample-tile">
+              <div class="label">Happy-hour reel concept</div>
+            </div>
+            <div class="sample-tile">
+              <div class="label">Founder story carousel</div>
+            </div>
+          </div>
+        </article>
+        <article class="sample-panel">
+          <div class="sample-badge">Feed outcome</div>
+          <h3>What changes after the glow-up</h3>
+          <p>Instead of a flat, inconsistent feed, the business gets stronger color, clearer hooks, more atmosphere, and content that feels worth stopping for.</p>
+          <div class="sample-feed">
+            <div class="sample-tile">
+              <div class="label">Brighter identity</div>
+            </div>
+            <div class="sample-tile">
+              <div class="label">Consistent visual rhythm</div>
+            </div>
+            <div class="sample-tile">
+              <div class="label">More memorable captions</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-tag">Caption direction</span>
+        <h2>Show the words, not just the promise.</h2>
+        <p>
+          A little bit of believable copy makes the service feel more credible than pure design language alone.
+        </p>
+      </div>
+      <div class="caption-grid">
+        <article class="caption-card">
+          <span class="caption-tag">Sample caption • restaurant spotlight</span>
+          <div class="caption-text">Golden hour hits differently at Golden Lei Kitchen 🌺
+
+From the grilled pineapple glaze to the warm welcome at the counter, this is the kind of neighborhood spot that turns a casual stop into a place you come back to on purpose.
+
+Come hungry. Leave glowing.</div>
+        </article>
+        <article class="caption-card">
+          <span class="caption-tag">Sample caption • local-business feature</span>
+          <div class="caption-text">Some businesses don’t need louder marketing.
+They need marketing that actually feels like them.
+
+That’s the Aloha Scout lane: more color, more clarity, more personality, and a feed that finally matches the real-life experience.</div>
         </article>
       </div>
     </section>
